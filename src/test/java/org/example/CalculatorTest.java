@@ -1,9 +1,27 @@
 package org.example;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class CalculatorTest {
+    @BeforeEach
+    public void beforeEachMethod(){
+        System.out.println("Before Each");
+    }
+    @BeforeAll
+    public static void beforeAllMethod(){
+        System.out.println("Before All");
+    }
+
+
+    @AfterEach
+    public void afterEachMethod(){
+        System.out.println("After Each");
+    }
+    @AfterAll
+    public static void afterAllMethod(){
+        System.out.println("After All");
+    }
+
     @Test
     public void checkAddition() {
         Calculator calculator = new Calculator();
